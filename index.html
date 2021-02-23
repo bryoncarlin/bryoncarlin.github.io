@@ -1,2 +1,177 @@
-# bryoncarlin.github.io
-3610 HW
+
+    <html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body> 
+    <canvas id=pane width=700 height=600 style="border:1px solid #000000;"></canvas> 
+    <script> 
+        var ctx = document.getElementById('pane').getContext('2d'); 
+
+        ctx.font = "30px Arial";
+        ctx.strokeText("Welcome Home", 10, 50);  
+
+      //house base
+      
+      ctx.fillStyle = "darkkhaki";
+      ctx.fillRect(200, 200, 300, 200);
+      
+      
+      //door
+      ctx.fillStyle = "brown";
+      ctx.fillRect(325, 275, 50, 125);
+      
+      //left window
+      ctx.fillStyle = "skyblue";
+      ctx.fillRect(225, 275, 50, 50);
+      //window frame
+      ctx.beginPath();
+      ctx.strokeStyle = "white";
+      ctx.moveTo(250, 275 );
+      ctx.lineTo(250, 325);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.strokeStyle = "white";
+      ctx.moveTo(225, 300);
+      ctx.lineTo(275, 300);
+      ctx.stroke();
+      
+      //right window
+      ctx.fillStyle = "skyblue";
+      ctx.fillRect(425, 275, 50, 50);
+      //window frame
+      ctx.beginPath();
+      ctx.strokeStyle = "white";
+      ctx.moveTo(425, 300);
+      ctx.lineTo(475, 300);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.strokeStyle = "white";
+      ctx.moveTo(450, 275);
+      ctx.lineTo(450, 325);
+      ctx.stroke();
+      
+      //roof
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "slategray";
+      ctx.moveTo(200, 200);
+      ctx.lineTo(350, 75);
+      ctx.lineTo(500, 200);
+      ctx.lineTo(200, 200);
+      ctx.stroke();
+      ctx.fill();
+      
+    //doorknob
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "gold";
+    ctx.arc(335,335,5, 0, 2*Math.PI);
+    ctx.stroke();
+    ctx.fill();
+      
+    //grass
+    var grd=ctx.createLinearGradient(0, 350, 700, 600);
+		grd.addColorStop(0,"yellowgreen");
+		grd.addColorStop(1,"green");
+		ctx.fillStyle=grd;
+		ctx.fillRect(0, 400, 700, 600);
+		
+		//Sun
+		
+		ctx.beginPath();
+    ctx.strokeStyle = "yellow";  
+		ctx.fillStyle = "yellow";
+		ctx.arc(600,100,50,0,2*Math.PI);
+		ctx.stroke();
+		ctx.fill();
+		
+		//chimney
+    ctx.beginPath();
+    ctx.strokeStyle = "firebrick";
+    ctx.fillStyle = "firebrick";
+    ctx.moveTo(415, 130);
+    ctx.lineTo(415, 90);
+    ctx.lineTo(445, 90);
+    ctx.lineTo(445, 155);
+    ctx.lineTo(415, 130);
+    ctx.stroke();
+    ctx.fill();
+		
+		//pole
+		ctx.fillStyle = "orange";
+		ctx.fillRect(70, 100, 10, 300);
+		
+		//flag
+      
+     var h = 70;
+		 var v = 90;
+
+for (var i = 0; i <= 13; i++) {
+   if (i % 2 != 0) {
+        ctx.fillStyle = "red";
+        ctx.fillRect(h, v, 90, 5);
+        v += 9;
+   }
+    else {
+        ctx.fillStyle = "white";
+        ctx.fillRect(h, v, 50, 4);
+    } 
+}
+
+//blue section
+ctx.fillStyle = "blue";
+ctx.fillRect(70, 90, 40, 30);
+
+//stars
+ctx.fillStyle = "gold";
+var size = 5;
+
+for (var i = 0; i < 8; i = i + 1) {
+  for (var j = 0; j < 6; j = j + 1) {
+    fillStar(i * size, j * size, size);
+  }
+}
+
+function fillStar(x, y, s) {
+  ctx.save();
+  ctx.translate(70, 90);
+  ctx.beginPath();
+  ctx.moveTo(x, y + s * 0.4);
+  ctx.lineTo(x + s, y + s * 0.4);
+  ctx.lineTo(x + s * 0.15, y + s * 0.9);
+  ctx.lineTo(x + s / 2, y);
+  ctx.lineTo(x + s * 0.85, y + s * 0.9);
+  ctx.lineTo(x, y + s * 0.4);
+  ctx.fill();
+  ctx.restore();
+} 
+		 // garden brick  or mouse hole if not completed. 
+     ctx.beginPath();
+    ctx.fillStyle = "black";
+    ctx.arc(300, 400, 12, 3.1, Math.PI*2.005);
+    ctx.closePath();
+    ctx.lineWidth = 5;
+    ctx.fill();
+		
+    // walkway
+      ctx.beginPath();
+      ctx.fillStyle = "grey";
+      ctx.strokeStyle = "grey";
+      ctx.moveTo(325, 400);
+      ctx.lineTo(330, 475);
+      ctx.lineTo(370, 525);
+      ctx.lineTo(375, 600);
+      ctx.lineTo(425, 600);
+      ctx.lineTo(420, 525);
+      ctx.lineTo(380, 475);
+      ctx.lineTo(375, 400);
+      ctx.lineTo(325, 400);
+      ctx.stroke();
+      ctx.fill();
+          
+    </script>
+    </body>
+</html> 
+    	
+		
