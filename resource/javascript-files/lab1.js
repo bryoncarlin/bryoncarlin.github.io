@@ -57,6 +57,6 @@ var fitnum = findchartfit();
 for(var f = 0; f < canvas_chart.height/100; f++)
   {
     drawrect(f*100, 600, 100, (fruits.quantity[f])*fitnum, fruits.color[f]);
-    drawtext(fruits.name[f],'18px Century Gothic','black',(f*100)+50,550);
-    drawtext(fruits.quantity[f],'20px Century Gothic','black',((f*100) + 50),575);
+    drawtext(fruits.name[f],'15px Comic Sans','black',(f*100)+50,520);
+    drawtext(fruits.quantity[f],'25px Comic Sans','black',((f*100) + 50),580);
   }
