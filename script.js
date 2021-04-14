@@ -31,3 +31,11 @@ function animate (){
     requestAnimationFrame(animate);
 }
 animate();
+
+window.addEventListener("keydown", function(e){
+    keys[e.keycode] = true;
+
+});
+window.addEventListener("keyup", function(e){
+    delete keys[e.keycode];
+});
